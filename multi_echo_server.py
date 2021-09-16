@@ -25,7 +25,6 @@ def handle_echo(addr, conn):
     print("Connected by", addr)
 
     full_data = conn.recv(BUFFER_SIZE)
-    time.sleep(5)
     conn.sendall(full_data)
     conn.shutdown(socket.SHUT_RDWR)
     conn.close()
