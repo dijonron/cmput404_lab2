@@ -1,6 +1,6 @@
-1. 
-2.
-3.
-4.
-5.
-6.
+1. Specifying the socket typ by socket.SOCK_STREAM makes a TCP socket
+2. Server sockets need to call bind() and listen() to specify which port. It appears client sockets do not
+3. By setting sock opt socket.SO_REUASEADDR
+4. We can get the ip and port number py printing addr
+5. It returns the data that was recieved 
+6. https://github.com/dijonron/cmput404_lab2

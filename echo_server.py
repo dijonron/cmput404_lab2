@@ -11,7 +11,7 @@ def main():
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
     
         #QUESTION 3
-        s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1) #reuse address here 
+        s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1) # reuse address here REUSEADDR
         
         #bind socket to address
         s.bind((HOST, PORT))
