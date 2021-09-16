@@ -5,7 +5,7 @@ import socket, sys
 def create_tcp_socket():
     print('Creating socket')
     try:
-        s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        s = socket.socket(socket.AF_INET, socket.SOCK_STREAM) # the argument here is what we need for TCP
     except (socket.error, msg):
         print(f'Failed to create socket. Error code: {str(msg[0])} , Error message : {msg[1]}')
         sys.exit()
@@ -52,7 +52,7 @@ def main():
         
         #send the data and shutdown
         send_data(s, payload)
-        s.shutdown(socket.SHUT_WR)
+        s.shutdown(socket.SHUT_WR) #shutdown() is different from close()
 
         #continue accepting data until no more left
         full_data = b""
